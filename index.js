@@ -13,7 +13,7 @@ const run = async () => {
     $liveEvents.each(($l, $el) => {
         venues.push(cheerio.load($el).text());
     })
-    write.sync('email.htm', venues.join('\n'), { newline: true }); 
+    write.sync('email.html', venues.join('\n'), { newline: true }); 
 }
 
 run().then(() => console.log('done'))
