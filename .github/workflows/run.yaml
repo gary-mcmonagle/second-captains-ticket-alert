@@ -4,5 +4,6 @@ jobs:
     name: 'Hello World'
     runs-on: ubuntu-latest
     steps:
-      - name: 'node16'
+      - uses: actions/checkout@v2
+      - name: 'npm i'
         run: 'npm i'
