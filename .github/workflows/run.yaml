@@ -1,4 +1,7 @@
-on: [push]
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 6,8,9,11,12,15,17,19,21 * * *'
 jobs:
   build:
     name: 'Hello World'
@@ -25,7 +28,7 @@ jobs:
           # Required recipients' addresses:
           to: ${{secrets.MAIL_USERNAME}}
           # Required sender full name (address can be skipped):
-          from: Luke Skywalker # <user@example.com>
+          from: Me # <user@example.com>
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           html_body: file://email.html
