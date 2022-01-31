@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'node16'
-      - run: 'npm i'
+        run: 'npm i'
