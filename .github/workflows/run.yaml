@@ -1,15 +1,11 @@
 on: [push]
 jobs:
-  name: 'Hello World'
-  description: 'Greet someone and record the time'
-  inputs:
-    who-to-greet:  # id of input
-      description: 'Who to greet'
-      required: true
-      default: 'World'
-  outputs:
-    time: # id of output
-      description: 'The time we greeted you'
-  runs:
-    using: 'node16'
-    main: 'index.js'
+  build:
+    name: 'Hello World'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'node16'
+      - run: 'npm i'
+
+      # - name: 'node16'
+      # - run: 'node index.js'
