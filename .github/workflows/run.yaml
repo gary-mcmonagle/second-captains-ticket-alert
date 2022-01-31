@@ -6,6 +6,3 @@ jobs:
     steps:
       - name: 'node16'
       - run: 'npm i'
-
-      # - name: 'node16'
-      # - run: 'node index.js'
