@@ -7,3 +7,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: 'npm i'
         run: 'npm i'
+      - name: 'npm i'
+        run: 'node index.js'
